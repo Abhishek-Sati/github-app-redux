@@ -1,0 +1,39 @@
+.mainbox {
+  grid-column: 1/-1;
+  background-color: $primaryColor;
+  margin: auto;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.err {
+  position: absolute;
+  top: 20%;
+  left: 35%;
+  display: flex;
+  justify-content: center;
+  & > div {
+    color: #ffffff;
+    font-size: 11rem;
+    margin: 0 4rem;
+  }
+}
+
+.msg {
+  text-align: center;
+  font-size: 1.6rem;
+  position: absolute;
+  left: 16%;
+  top: 45%;
+  width: 75%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+}

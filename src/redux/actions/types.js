@@ -1,0 +1,7 @@
+export const USERS = 'users'
+export const SEARCHED_USERS = 'searched_user'
+export const ALERT = 'alert'
+export const LOADER = 'loader'
+export const FOLLOWERS = 'followers'
+export const REPOS = 'repos'
+export const UPDATE_REPOS = 'update_repos'

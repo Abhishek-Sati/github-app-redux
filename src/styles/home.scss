@@ -1,0 +1,84 @@
+.home_container {
+  grid-column: center-start/center-end;
+  text-align: center;
+  margin: 2rem 0;
+  &__heading {
+    font-size: 3.2rem;
+    color: $primaryColor;
+  }
+  &__follower_btn {
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+  }
+  &__search_container {
+    margin-top: 5rem;
+    & > input[type="text"] {
+      padding: 1rem;
+      font-size: 1.8rem;
+      border: 2px solid $primaryColor;
+      border-radius: 0.5rem;
+      outline: none;
+    }
+    & > button {
+      padding: 1rem;
+      font-size: 1.8rem;
+      margin-left: 0.5rem;
+      border-radius: 0.5rem;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background-color: $white;
+        color: $primaryColor;
+        border-color: $primaryColor;
+      }
+      @media screen and (max-width: 320px) {
+        margin: 1rem;
+      }
+    }
+  }
+
+  &__repos_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    margin: 5rem;
+    @media screen and (max-width: $bp-large) {
+      grid-template-columns: 1fr;
+      margin: 5rem 2rem;
+    }
+  }
+
+  &__repo_card {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: min-content 1fr;
+    column-gap: 2rem;
+    row-gap: 0.4rem;
+    padding: 1.5rem;
+    box-shadow: $box-shadow;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    &:hover {
+      box-shadow: $hover-box-shadow;
+    }
+    &__img {
+      width: 6rem;
+      height: 6rem;
+      border-radius: 50%;
+      grid-row: 1/-1;
+    }
+    &__name_desc_wrapper {
+      display: flex;
+      align-items: center;
+      &__name {
+        text-transform: capitalize;
+        font-size: 2rem;
+        color: $primaryColor;
+      }
+    }
+    &__name_desc_wrapper__desc {
+      color: gray;
+      font-weight: 500;
+      text-align: left;
+    }
+  }
+}
